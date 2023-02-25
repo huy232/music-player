@@ -1,6 +1,7 @@
 :root {
 	--primary-color: #ec1f55;
 	--text-color: #333;
+	--hover-color: rgba(134, 93, 255, 0.5);
 }
 
 * {
@@ -141,6 +142,7 @@ header h2 {
 	padding: 8px 16px;
 	border-radius: 5px;
 	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+	transition-duration: 0.3s;
 }
 
 .song.active {
@@ -184,4 +186,18 @@ header h2 {
 	padding: 16px 8px;
 	color: #999;
 	font-size: 18px;
+}
+
+.song:not(.active):hover {
+	opacity: 0.8;
+	background-color: var(--hover-color);
+}
+
+.btn-repeat,
+.btn-prev,
+.btn-toggle-play,
+.btn-next,
+.btn-random,
+.song {
+	cursor: pointer;
 }
